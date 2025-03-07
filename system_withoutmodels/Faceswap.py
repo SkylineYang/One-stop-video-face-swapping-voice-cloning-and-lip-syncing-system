@@ -39,7 +39,7 @@ def faceswap(check_faceswap, algorithm, source_video, source_image, check_multif
                 faceswap_cmd = f"cd {SIMSWAP_PATH} && {APP_PYTHON} test_video_swapsingle.py --crop_size 224 --use_mask \
                     --name people --Arc_path arcface_model/arcface_checkpoint.tar \
                     --pic_a_path {source_image} --video_path {source_video} \
-                    --output_path {videopath} --temp_path {temppath}" # 在/data/sheyang/system/SimSwap/util/videoswap.py中修改保存视频名称
+                    --output_path {videopath} --temp_path {temppath}" # 在videoswap.py中修改保存视频名称
             elif algorithm == "IIM":
                 faceswap_cmd = f"cd {IIM_PATH} && {APP_PYTHON} demo.py \
                     --config config/vox-256.yaml \
