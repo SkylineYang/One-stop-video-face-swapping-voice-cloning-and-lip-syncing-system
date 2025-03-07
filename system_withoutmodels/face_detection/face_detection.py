@@ -7,7 +7,6 @@ import argparse
 
 def face_classification(videopath, facepath, face_detection_conf=0.8, face_recognition_conf=0.6):
     # 加载视频
-    # cap = cv2.VideoCapture('/data/sheyang/郭德纲相声.mp4')
     cap = cv2.VideoCapture(videopath)
     path = './face_detection/yolov8n-face-lindevs.pt'
     model = YOLO(path, task='detect')
